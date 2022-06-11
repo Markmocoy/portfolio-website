@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="user">
+        <h3 class="name" style="Color: rgb(12, 163, 183);">Mocoy, Mark</h3>
+        <p class="post">front end developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#contact">Experience</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div id="menu" class="fas fa-bars"></div>
+
+<section class="home" id="home">
+
+    <h3>HI THERE !</h3>
+    <h1>I'M <span>Mocoy, Mark</span></h1>
+    <p>
+        Its great to me to show my outout. This is my work after a long month, Actualy  I am an artist I do drawing portrait and by that I earn my money and I try my best to do great as a web developer and purseu this carrer.
+    </p>
+</section>
+
+<section class="about" id="about">
+
+<h1 class="heading"> <span>about</span> me </h1>
+
+<div class="main">
+    <img src="mocs.png">
+    <div class="about-text">
+
+        <h5>Developer <span>& Designer</span></h5>
+        <p>I am a front-end web developer. and I think this is my path to walk or the career i want and my heart just happy while creating web design and right now currently study so I hope you will like my portfolio this is not be the great porfolio because  i just starting learning with it. </p>
+
+    </div>
+</div>
+
+</section>
+
+<section class="education" id="education">
+
+<h1 class="heading"> my <span>education</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+
+        <span>2015</span>
+        <h3>Senior High School</h3>
+        <p>Automotive</p>
+    </div>
+
+    <div class="box">
+
+        <span>2022</span>
+        <h3>College</h3>
+        <p>Bachelor in Science of Information Technology</p>
+    </div>
+
+</div>
+
+</section>
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> my <span>Project</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="project1.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="project2.jpg" alt="">
+    </div>
+</div>
+
+</section>
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>Exper</span>ience </h1>
+
+<div class="row">
+
+    <div class="content">
+
+        <div class="info">
+            <h3>None about Web developer</h3>
+           
+        </div>
+
+
+
+</section>
+<footer>
+    <p>Mocoy, Mark</p>
+    <p>Thank You For Visiting</p>
+    <div class="social">
+
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+    </div>
+    <p style="color: white;">Contact Me </p>
+
+</footer>
+
+
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/script.js"></script>
+<script>
+    $(document).ready(function(){
+
+$('#menu').click(function(){
+  $(this).toggleClass('fa-times');
+  $('header').toggleClass('toggle');
+});
+
+$(window).on('scroll load',function(){
+
+  $('#menu').removeClass('fa-times');
+  $('header').removeClass('toggle');
+
+  if($(window).scrollTop() > 0){
+    $('.top').show();
+  }else{
+    $('.top').hide();
+  }
+
+});
+
+$('a[href*="#"]').on('click',function(e){
+
+  e.preventDefault();
+
+  $('html, body').animate({
+
+    scrollTop : $($(this).attr('href')).offset().top,
+
+  },
+    500, 
+    'linear'
+  );
+
+});
+
+});
+</script>
+
+
+</body>
+</html>
